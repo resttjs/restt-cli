@@ -1,0 +1,15 @@
+{
+  "cloudflare": {
+    "account": "",
+    "email": "",
+    "key": "",
+    "zone": ""
+  },
+  "cloudworker": {
+    "debug": false,
+    "port": 3000
+  },
+  "workerskv": {
+    "namespaces": []
+  }
+}
