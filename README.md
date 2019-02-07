@@ -51,9 +51,9 @@ $ npm install -g restt-cli
 
 ## Documentation
 
-### Configuration
+##### Configuration
 
-After installing Restt-CLI a file named `restt.config.json` will be added to your project directory.<br>
+After installing Restt-CLI, `restt.config.json` will automatically be added to your project directory.<br>
 
 It includes all of the the following default configurations required for running Restt-CLI:<br>
 
@@ -96,7 +96,7 @@ It includes all of the the following default configurations required for running
 }
 ```
 
-All properties in `restt.config.json` will be bound to the `configuration` object which is accessible from within any edge worker script which is [served](#serving-for-development) or [deployed](#deploying-to-the-edge) with Restt-CLI.<br>
+All properties in `restt.config.json` will be bound to the `configuration` object which is accessible from within your edge worker script which is [served](https://github.com/resttjs/restt/blob/README.md#serving-for-development) or [deployed](https://github.com/resttjs/restt/blob/README.md#deploying-to-the-edge) with Restt-CLI.<br>
 
 ###### restt.config.json
 
@@ -120,15 +120,33 @@ All properties in `restt.config.json` will be bound to the `configuration` objec
 console.log(configuration.credentials.authkey);
 ```
 
-If you also have a `webpack.config.js` in your project directory then Restt-CLI will also load and use it.<br>
+If you also have a `webpack.config.js` in your project directory, then Restt-CLI will also load and use it when compiling your edge worker script.<br>
 
 You can also add webpack configurations to your `restt.config.json` which will be prioritised over your `webpack.config.js`.<br>
 
+###### restt.config.json
+
+```ts
+```ts
+{
+  "cloudworker": {
+    "debug": false,
+    "port": 3000
+  },
+  ...
+  "webpack": {
+    "output": {
+      "filename": "demo.restt.worker.js"
+    }
+  }
+}
+```
+
 ### Serving for development
 
-Restt-CLI makes developing your edge worker services with or without Restt much easier and faster.<br>
+Restt-CLI makes developing your edge worker services fast and simple.<br>
 
-Running the following command will automatically build and serve your edge worker script.<br>
+Automatically build and serve your edge worker service:<br>
 
 ```bash
 $ restt serve [script]
@@ -136,7 +154,7 @@ $ restt serve [script]
 
 `script` must point to the path where your edge worker script is located (e.g. `src/helloworld-service.js`).<br>
 
-If any changes are detected to your script will be automatically recompiled and hot-reloaded.<br>
+While running `serve`, any modifications to your script will be detected automatically, and your script will be recompiled and hot-reloaded.<br>
 
 [Service origins](https://github.com/resttjs/restt/blob/README.md#serviceorigin) used in [Restt Services](https://github.com/resttjs/restt/blob/README.md#service) will be automatically rewritten based on your [cloudworker.port](#configuration).<br>
 
