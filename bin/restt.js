@@ -7,8 +7,11 @@
  * MIT Licensed
  */
 
-// Import the module and execute
-require('../lib/index.js')({
+// Import the Restt-CLI module
+const cli = require('../lib/index.js');
+
+// Execute the action on the CLI
+cli.execute({
   action: process.argv[2],
   script: process.argv[3]
 });

@@ -3,7 +3,10 @@
     "account": "",
     "email": "",
     "key": "",
-    "zone": ""
+    "zone": "",
+    "enterprise": false,
+    "script": "",
+    "routes": []
   },
   "cloudworker": {
     "debug": false,
