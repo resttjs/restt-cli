@@ -6,6 +6,3 @@ node_modules/
 
 # Environment variables file
 .env
-
-# Root config file
-restt.config.*
