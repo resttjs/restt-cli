@@ -1,6 +1,6 @@
 {
   "name": "restt-cli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "powerful cli tools for creating edge workers with restt",
   "main": "lib/index.js",
   "bin": {
