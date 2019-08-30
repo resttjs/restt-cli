@@ -1,13 +1,13 @@
 {
   "name": "restt-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "powerful cli tools for creating edge workers with restt",
   "main": "lib/index.js",
   "bin": {
     "restt": "./bin/restt.js"
   },
   "scripts": {
-    "postinstall": "./bin/postinstall.js"
+    "postinstall": "bin/postinstall.js"
   },
   "dependencies": {
     "@dollarshaveclub/cloudworker": "0.0.11",
