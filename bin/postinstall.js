@@ -5,8 +5,11 @@
 // Import the required modules from Restt-CLI
 const fs = require('../lib/fs');
 
+// Path for the default restt configuration file
+const basepath = fs.path(process.argv[2], 'res/restt.config.json');
+
 // Read the base restt.config.json from the package
-const base = require(fs.path(__dirname, '../res/restt.config.json'));
+const base = (fs.exists(basepath)) ? require(basepath) : '';
 
 // Path for the output configuration file
 const path = fs.path(process.env.INIT_CWD, 'restt.config.json');
