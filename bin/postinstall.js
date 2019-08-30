@@ -9,7 +9,7 @@ const fs = require('../lib/fs');
 const basepath = fs.path(__dirname, '../res/restt.config.json');
 
 // Read the base restt.config.json from the package
-const base = (fs.exists(basepath)) ? require(basepath) : '{}';
+const base = (fs.exists(basepath)) ? require(basepath) : {};
 
 // Path for the output configuration file
 const path = fs.path(process.env.INIT_CWD, 'restt.config.json');
