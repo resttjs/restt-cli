@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@dollarshaveclub/cloudworker": "0.0.11",
-    "webpack": "^4.39.3"
+    "webpack": "^5.75.0"
   },
   "keywords": [
     "restt-cli",
